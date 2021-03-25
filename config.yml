@@ -7,8 +7,8 @@ description: This course is for beginners to Github to learn how to do basic Git
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name: my-first-article    # the name of the repository when it is created for the learner
-  repo: lab-template-learn-lab  # the name of the template repository from which to clone for the learner
+  name: my-first-article
+  repo: lab-template-learn-lab 
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
@@ -24,8 +24,8 @@ before:
 steps:
 # Step 1: Create a branch
 - title: Create a branch # the title of the step, shown to the learner in the course progress page
-  description: First, you will need to create a new branch so that we can safely edit your documentation # a description of the step, shown to the learner in the course progress page
-  event: create # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  description: First, you will need to create a new branch so that we can safely edit your documentation
+  event: create
   actions:
   - type: gate
     left: '%payload.create.ref_type%'
