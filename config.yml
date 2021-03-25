@@ -30,7 +30,12 @@ steps:
   - type: gate
     left: '%payload.create.ref_type%'
     operator: ===                        
-    right: "branch"                   
+    right: "branch"
+    else:
+    - type: respond
+      with: 01_try-again.md
+  - type: respond
+    with: 01_nice-work.md
 
 # Step 2: Create a new file
 - title: Create a new file and commit # the title of the step, shown to the learner in the course progress page
