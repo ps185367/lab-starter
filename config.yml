@@ -37,24 +37,24 @@ steps:
   - type: respond
     with: 01_nice-work.md
 
-# Step 2: Create a new file
-- title: Create a new file and commit # the title of the step, shown to the learner in the course progress page
-  description: Now that you have created your branch. It's time to create a new file to add to your documentation project# a description of the step, shown to the learner in the course progress page
-  event: push # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# # Step 2: Create a new file
+# - title: Create a new file and commit # the title of the step, shown to the learner in the course progress page
+#   description: Now that you have created your branch. It's time to create a new file to add to your documentation project# a description of the step, shown to the learner in the course progress page
+#   event: push # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#   actions: # a list of the actions that will occur when the step is triggered by an event
+#   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 3: Open PR
-- title: Open the Pull Request # the title of the step, shown to the learner in the course progress page
-  description: Now that you have added your changes. It's time to open a pr so that your content can be reviewed and merged into the documentation # a description of the step, shown to the learner in the course progress page
-  event: pull_request # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# # Step 3: Open PR
+# - title: Open the Pull Request # the title of the step, shown to the learner in the course progress page
+#   description: Now that you have added your changes. It's time to open a pr so that your content can be reviewed and merged into the documentation # a description of the step, shown to the learner in the course progress page
+#   event: pull_request # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#   actions: # a list of the actions that will occur when the step is triggered by an event
+#   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 4: Merge PR
-- title: Merge the Pull Request# the title of the step, shown to the learner in the course progress page
-  description: Now that your pull request has been reviewed and the status checks fulfilled it's time to merge# a description of the step, shown to the learner in the course progress page
-  event: pull_request.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# # Step 4: Merge PR
+# - title: Merge the Pull Request# the title of the step, shown to the learner in the course progress page
+#   description: Now that your pull request has been reviewed and the status checks fulfilled it's time to merge# a description of the step, shown to the learner in the course progress page
+#   event: pull_request.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+#   actions: # a list of the actions that will occur when the step is triggered by an event
+#   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
