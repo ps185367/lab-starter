@@ -27,7 +27,10 @@ steps:
   description: First, you will need to create a new branch so that we can safely edit your documentation # a description of the step, shown to the learner in the course progress page
   event: create # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
+  - type: gate                            # using the gate action
+    left: '%payload.create.ref_type%'     # get create type from create payload
+    operator: ===                         # check for strict equality, see more at https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity
+    right: branch                         # this is the expected value
 
 # Step 2: Create a new file
 - title: Create a new file and commit # the title of the step, shown to the learner in the course progress page
