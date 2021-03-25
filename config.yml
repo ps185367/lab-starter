@@ -1,6 +1,6 @@
-title: # a name for your Learning Lab course
-tagline: # a short description for your Learning Lab course, displayed on the course catalog
-description: # a longer description for your Learning Lab course, displayed on the course's landing page
+title: Write an article on GitHub
+tagline: Walkthrough of publishing content# a short description for your Learning Lab course, displayed on the course catalog
+description: This course is for beginners to Github to learn how to do basic Github tasks while authoring thier first article# a longer description for your Learning Lab course, displayed on the course's landing page
 
 # Repository setup
 # The following section template information for the repository
@@ -14,9 +14,8 @@ template:
 # Actions to take place after the learner registers, but before they start interacting with their repo
 
 before:
-- type: # the type of action, full list at https://lab.github.com/docs/actions/
-  # some actions require additional options, those should appear below `type:`
-  # you can execute multiple actions in the `before` block
+- type: respond
+  with: 01_first-response.md
 
 # Steps for the course
 # A list of steps that take the learner through the course
@@ -26,35 +25,36 @@ steps:
 # Step 1: Create a branch
 - title: Create a branch # the title of the step, shown to the learner in the course progress page
   description: First, you will need to create a new branch so that we can safely edit your documentation # a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
+  event: create # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions:
+  - type: gate
+    left: '%payload.create.ref_type%'
+    operator: ===                        
+    right: "branch"
+    else:
+    - type: respond
+      with: 01_try-again.md
+  - type: respond
+    with: 01_nice-work.md
 
 # Step 2: Create a new file
-- title: Create a new file # the title of the step, shown to the learner in the course progress page
+- title: Create a new file and commit # the title of the step, shown to the learner in the course progress page
   description: Now that you have created your branch. It's time to create a new file to add to your documentation project# a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  event: push # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 3: Commit changes
-- title: Commit the changes # the title of the step, shown to the learner in the course progress page
-  description: Now that you have created the file and edited it. It's time to commit the changes. # a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-  actions: # a list of the actions that will occur when the step is triggered by an event
-  - type: # the type of action, full list at https://lab.github.com/docs/actions
-
-# Step 4: Open PR
+# Step 3: Open PR
 - title: Open the Pull Request # the title of the step, shown to the learner in the course progress page
   description: Now that you have added your changes. It's time to open a pr so that your content can be reviewed and merged into the documentation # a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  event: pull_request # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 5: Merge PR
+# Step 4: Merge PR
 - title: Merge the Pull Request# the title of the step, shown to the learner in the course progress page
   description: Now that your pull request has been reviewed and the status checks fulfilled it's time to merge# a description of the step, shown to the learner in the course progress page
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  event: pull_request.closed # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
