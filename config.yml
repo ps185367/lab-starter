@@ -7,8 +7,8 @@ description: # a longer description for your Learning Lab course, displayed on t
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name: # the name of the repository when it is created for the learner
-  repo: # the name of the template repository from which to clone for the learner
+  name: my-first-article    # the name of the repository when it is created for the learner
+  repo: lab-template-learn-lab  # the name of the template repository from which to clone for the learner
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
@@ -23,38 +23,38 @@ before:
 # Create one step for each action that a learner will complete
 
 steps:
-# Step 1: INTERNAL COMMENT DESCRIBING STEP 
-- title: # the title of the step, shown to the learner in the course progress page
-  description: # a description of the step, shown to the learner in the course progress page
+# Step 1: Create a branch
+- title: Create a branch # the title of the step, shown to the learner in the course progress page
+  description: First, you will need to create a new branch so that we can safely edit your documentation # a description of the step, shown to the learner in the course progress page
   event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 2: INTERNAL COMMENT FOR STEP 2
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 2: Create a new file
+- title: Create a new file # the title of the step, shown to the learner in the course progress page
+  description: Now that you have created your branch. It's time to create a new file to add to your documentation project# a description of the step, shown to the learner in the course progress page
+  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
+  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 3: INTERNAL COMMENT FOR STEP 3
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 3: Commit changes
+- title: Commit the changes # the title of the step, shown to the learner in the course progress page
+  description: Now that you have created the file and edited it. It's time to commit the changes. # a description of the step, shown to the learner in the course progress page
+  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
+  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 4: INTERNAL COMMENT FOR STEP 4
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 4: Open PR
+- title: Open the Pull Request # the title of the step, shown to the learner in the course progress page
+  description: Now that you have added your changes. It's time to open a pr so that your content can be reviewed and merged into the documentation # a description of the step, shown to the learner in the course progress page
+  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
+  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
-# Step 5: INTERNAL COMMENT FOR STEP 5
-# - title: # the title of the step, shown to the learner in the course progress page
-#  description: # a description of the step, shown to the learner in the course progress page
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
-#  - type: # the type of action, full list at https://lab.github.com/docs/actions
+# Step 5: Merge PR
+- title: Merge the Pull Request# the title of the step, shown to the learner in the course progress page
+  description: Now that your pull request has been reviewed and the status checks fulfilled it's time to merge# a description of the step, shown to the learner in the course progress page
+  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+  actions: # a list of the actions that will occur when the step is triggered by an event
+  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
