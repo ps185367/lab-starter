@@ -1,6 +1,6 @@
 # Title
 
-This is the paragraph to would describe the concept. It may link to other resources, or include images. Try to avoid _too_ much information and _too_ many external links. The purpose of these paragraphs is to give the user the information they need to complete the activity, understand what they're doing, and understand why they're doing it.
+In github, branches are a way to isolate new changes from your project until they are ready to be included. Branches allow you to safely try new things without worrying about negatively affecting your project. Should you write yourself into a dead end, or accidently mess up the formatting of a document beyond easy repair, you can simply discard the branch and try again.
 
 ### More detail 
 
@@ -8,14 +8,14 @@ If there are concepts that should be described separately, they might belong in 
 
 ## Step X: Description
 
-Here, we'll describe generally what the user is about to do.
+Here, you'll create a new branch for your project so you can begin working on your new addition.
 
-### :keyboard: Activity: Specific description
+### :keyboard: Activity: Create a new branch
 
-1. Step 1 in short sentence
-2. Step 2 in short sentence
-3. Step 3 in short sentence
-
+1. Navigate to the <> Code tab and click on branch to bring up a drop down.
+2. Type in the name of your new branch. It should be descriptive. Note: Do not use space in your branch name. Replace any spaces with - or _.
+3. Click "Create branch: <your branch name>. You have now created a branch.
+ 
 <hr>
 <h3 align="center">Watch below this comment for my response</h3>
 
